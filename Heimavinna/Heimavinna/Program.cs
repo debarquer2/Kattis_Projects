@@ -1,7 +1,7 @@
-﻿// https://open.kattis.com/problems/heimavinna
+﻿// Based on https://open.kattis.com/problems/heimavinna
 
-//string input = System.Console.ReadLine();
-string input = "1-3;5;7;10-13";
+//string input = System.Console.ReadLine(); // For use with kattis
+string input = "1-3;5;7;10-13"; // For testing purposes
 
 string a = "";
 
@@ -20,7 +20,7 @@ foreach(char c in inputArray)
     {
         if(prevNumber > -1)
         {
-            nrOfproblems += int.Parse(a) - prevNumber + 1; // Since the assignments are inclusive, for example 1-3 we need to add + 1 here
+            nrOfproblems += int.Parse(a) - prevNumber + 1; // To account for all the assignments we need to add a +1 here
             a = "";
             prevNumber = -1;
         }
@@ -37,7 +37,7 @@ foreach(char c in inputArray)
 
 if (prevNumber > -1)
 {
-    nrOfproblems += int.Parse(a) - prevNumber + 1;
+    nrOfproblems += int.Parse(a) - prevNumber + 1; // To account for all the assignments we need to add a +1 here
     a = "";
     prevNumber = -1;
 }

@@ -1,9 +1,11 @@
-﻿using System.Diagnostics;
+﻿// Based on https://open.kattis.com/problems/upprodun
 
-Test1(100000000, 330000000);
-Test2(100000000, 330000000);
+using System.Diagnostics;
 
-static void Test1(int n, int m)
+GetAnswer(10, 330);
+GetAnswerOptimized(10, 330);
+
+static void GetAnswer(int n, int m)
 {
     var watch = System.Diagnostics.Stopwatch.StartNew();
 
@@ -14,14 +16,14 @@ static void Test1(int n, int m)
     {
         for (int j = 0; j < first; j++)
         {
-            //System.Console.Write('*');
+            System.Console.Write('*');
         }
         if (remainder > 0)
         {
-            //System.Console.Write('*');
+            System.Console.Write('*');
             remainder--;
         }
-        //System.Console.Write('\n');
+        System.Console.Write('\n');
     }
 
     watch.Stop();
@@ -29,7 +31,7 @@ static void Test1(int n, int m)
     Console.WriteLine($"Time: {elapsedMs} {Stopwatch.IsHighResolution}");
 }
 
-static void Test2(int n, int m)
+static void GetAnswerOptimized(int n, int m)
 {
     var watch = System.Diagnostics.Stopwatch.StartNew();
 
@@ -47,14 +49,14 @@ static void Test2(int n, int m)
     {
         if (remainder > 0)
         {
-            //System.Console.Write(large);
+            System.Console.Write(large);
             remainder--;
         }
         else
         {
-            //System.Console.Write(small);
+            System.Console.Write(small);
         }
-        //System.Console.Write('\n');
+        System.Console.Write('\n');
     }
 
     watch.Stop();

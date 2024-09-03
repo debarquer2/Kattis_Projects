@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Based on https://open.kattis.com/problems/fizzbuzz2
+
+using System;
 
 //string[] nm = Console.ReadLine().Split(" ");
 string[] nm = "3 15".Split(" ");
@@ -15,8 +17,9 @@ for (int i = 0; i < n; i++)
 {
     int nrOfCorrectAnswers = 0;
 
-    //string[] split = Console.ReadLine().Split(" ");
-    string[] split = lines[i].Split(" ");
+    //string[] split = Console.ReadLine().Split(" "); // For use with Kattis
+    string[] split = lines[i].Split(" "); // For testing purposes
+
     for (int j = 0; j < m; j++) //m == split.Length
     {
         string s = split[j];

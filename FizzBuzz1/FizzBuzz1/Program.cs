@@ -1,6 +1,6 @@
-﻿using System;
+﻿// Based on: https://open.kattis.com/problems/fizzbuzz
 
-// Based on: https://open.kattis.com/problems/fizzbuzz
+using System;
 
 //FizzBuzz(Console.ReadLine().Split(" ")); // For use with Kattis
 FizzBuzz("3 5 15".Split()); // For testing purposes
